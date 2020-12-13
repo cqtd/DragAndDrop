@@ -16,8 +16,9 @@ namespace CQunity
 			rect.anchorMin = Vector2.one * 0.5f;
 			rect.anchorMax = Vector2.one * 0.5f;
 			rect.sizeDelta = GetComponent<RectTransform>().sizeDelta;
-
-			CanvasGroup canvasGroup = rect.gameObject.AddComponent<CanvasGroup>();
+			
+			CanvasGroup canvasGroup = rect.gameObject.GetOrAddComponent<CanvasGroup>();
+			
 			canvasGroup.blocksRaycasts = false;
 			canvasGroup.ignoreParentGroups = true;
 			canvasGroup.interactable = false;
